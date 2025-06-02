@@ -132,7 +132,7 @@ Apply changes:
    source ~/.bashrc
 ``` 
 
-## Step 7️⃣: Format HDFS and Start Hadoop
+## 7️⃣: Format HDFS and Start Hadoop
 
 Format HDFS:
 
