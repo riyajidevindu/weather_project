@@ -7,4 +7,5 @@ bin/hadoop jar share/hadoop/tools/lib/hadoop-streaming-*.jar \
 -output /weather/output \
 -mapper ~/weather_project/scripts/mapper.py \
 -reducer ~/weather_project/scripts/reducer.py
-bin/hdfs dfs -cat /weather/output/part-*
+bin/hdfs dfs -get /weather/output/part-* ~/weather_project/output/results.txt
+cat ~/weather_project/output/results.txt
