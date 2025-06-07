@@ -8,15 +8,15 @@ for line in sys.stdin:
         continue  # Skip header or empty lines
 
     parts = line.split(",")
-    if len(parts) != 6:
-        continue  # Malformed line
+    if len(parts) == 6:
+        city, datetime_str, temp, humidity, precipitation, wind = parts
 
-    city, datetime_str, temp, humidity, precipitation, wind = parts
-
-    try:
-        dt = datetime.strptime(datetime_str.strip(), "%Y-%m-%d %H:%M:%S")
-        month_key = dt.strftime("%Y-%m")
-
-        print(f"{city}-{month_key}\tTemperature:{temp},Humidity:{humidity},Precipitation:{precipitation},Wind:{wind}")
-    except Exception as e:
-        continue  # Skip lines with date parse errors
+        try:
+            # Parse the correct date format
+            dt = datetime.strptime(datetime_str.strip(), "%Y-%m-%d %H:%M:%S")
+            month_key = dt.strftime("%Y-%m")
+            
+            # Emit raw numbers (no labels)
+            print(f"{city}-{month_key}\t{temp},{humidity},{precipitation},{wind}")
+        except Exception:
+            continue

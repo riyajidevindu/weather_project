@@ -1,0 +1,50 @@
+Chicago-2024-01	Avg_Temp=14.86, Avg_Humidity=59.99, Avg_Precip=5.01, Avg_Wind=15.01
+Chicago-2024-02	Avg_Temp=15.12, Avg_Humidity=60.00, Avg_Precip=4.98, Avg_Wind=14.96
+Chicago-2024-03	Avg_Temp=15.08, Avg_Humidity=60.21, Avg_Precip=5.03, Avg_Wind=15.06
+Chicago-2024-04	Avg_Temp=15.09, Avg_Humidity=60.03, Avg_Precip=4.97, Avg_Wind=14.99
+Chicago-2024-05	Avg_Temp=14.85, Avg_Humidity=60.29, Avg_Precip=5.03, Avg_Wind=14.94
+Dallas-2024-01	Avg_Temp=14.94, Avg_Humidity=59.93, Avg_Precip=5.01, Avg_Wind=14.97
+Dallas-2024-02	Avg_Temp=14.98, Avg_Humidity=60.09, Avg_Precip=4.98, Avg_Wind=15.03
+Dallas-2024-03	Avg_Temp=14.83, Avg_Humidity=59.93, Avg_Precip=4.96, Avg_Wind=15.07
+Dallas-2024-04	Avg_Temp=15.16, Avg_Humidity=59.86, Avg_Precip=5.04, Avg_Wind=15.06
+Dallas-2024-05	Avg_Temp=15.24, Avg_Humidity=60.02, Avg_Precip=4.98, Avg_Wind=14.95
+Houston-2024-01	Avg_Temp=14.89, Avg_Humidity=60.17, Avg_Precip=5.01, Avg_Wind=15.00
+Houston-2024-02	Avg_Temp=14.97, Avg_Humidity=59.88, Avg_Precip=5.01, Avg_Wind=14.99
+Houston-2024-03	Avg_Temp=14.97, Avg_Humidity=59.92, Avg_Precip=4.96, Avg_Wind=15.01
+Houston-2024-04	Avg_Temp=14.85, Avg_Humidity=59.80, Avg_Precip=4.99, Avg_Wind=15.00
+Houston-2024-05	Avg_Temp=15.10, Avg_Humidity=60.12, Avg_Precip=5.02, Avg_Wind=14.91
+Los Angeles-2024-01	Avg_Temp=15.05, Avg_Humidity=60.03, Avg_Precip=5.00, Avg_Wind=14.97
+Los Angeles-2024-02	Avg_Temp=14.99, Avg_Humidity=60.00, Avg_Precip=5.00, Avg_Wind=15.05
+Los Angeles-2024-03	Avg_Temp=15.06, Avg_Humidity=60.10, Avg_Precip=5.00, Avg_Wind=15.05
+Los Angeles-2024-04	Avg_Temp=15.08, Avg_Humidity=60.28, Avg_Precip=5.01, Avg_Wind=15.10
+Los Angeles-2024-05	Avg_Temp=15.32, Avg_Humidity=59.87, Avg_Precip=5.02, Avg_Wind=14.98
+New York-2024-01	Avg_Temp=14.91, Avg_Humidity=60.10, Avg_Precip=5.00, Avg_Wind=14.99
+New York-2024-02	Avg_Temp=15.01, Avg_Humidity=60.09, Avg_Precip=5.02, Avg_Wind=14.94
+New York-2024-03	Avg_Temp=15.09, Avg_Humidity=60.08, Avg_Precip=4.96, Avg_Wind=15.02
+New York-2024-04	Avg_Temp=15.01, Avg_Humidity=59.98, Avg_Precip=4.99, Avg_Wind=14.95
+New York-2024-05	Avg_Temp=15.06, Avg_Humidity=59.92, Avg_Precip=5.01, Avg_Wind=15.09
+Philadelphia-2024-01	Avg_Temp=15.00, Avg_Humidity=59.96, Avg_Precip=5.04, Avg_Wind=14.94
+Philadelphia-2024-02	Avg_Temp=15.03, Avg_Humidity=60.14, Avg_Precip=4.99, Avg_Wind=14.97
+Philadelphia-2024-03	Avg_Temp=15.15, Avg_Humidity=60.02, Avg_Precip=5.02, Avg_Wind=15.10
+Philadelphia-2024-04	Avg_Temp=14.95, Avg_Humidity=60.02, Avg_Precip=4.99, Avg_Wind=14.98
+Philadelphia-2024-05	Avg_Temp=15.05, Avg_Humidity=60.12, Avg_Precip=4.98, Avg_Wind=14.93
+Phoenix-2024-01	Avg_Temp=10.00, Avg_Humidity=60.00, Avg_Precip=7.48, Avg_Wind=15.00
+Phoenix-2024-02	Avg_Temp=9.99, Avg_Humidity=59.99, Avg_Precip=7.53, Avg_Wind=15.06
+Phoenix-2024-03	Avg_Temp=14.95, Avg_Humidity=60.00, Avg_Precip=4.99, Avg_Wind=14.99
+Phoenix-2024-04	Avg_Temp=14.95, Avg_Humidity=60.26, Avg_Precip=5.00, Avg_Wind=14.91
+Phoenix-2024-05	Avg_Temp=14.96, Avg_Humidity=59.95, Avg_Precip=5.02, Avg_Wind=14.94
+San Antonio-2024-01	Avg_Temp=14.97, Avg_Humidity=59.84, Avg_Precip=5.00, Avg_Wind=14.99
+San Antonio-2024-02	Avg_Temp=15.15, Avg_Humidity=60.11, Avg_Precip=5.00, Avg_Wind=14.99
+San Antonio-2024-03	Avg_Temp=15.06, Avg_Humidity=59.96, Avg_Precip=5.00, Avg_Wind=14.89
+San Antonio-2024-04	Avg_Temp=15.02, Avg_Humidity=59.86, Avg_Precip=5.01, Avg_Wind=14.94
+San Antonio-2024-05	Avg_Temp=14.89, Avg_Humidity=59.88, Avg_Precip=5.04, Avg_Wind=14.99
+San Diego-2024-01	Avg_Temp=15.00, Avg_Humidity=60.20, Avg_Precip=5.00, Avg_Wind=14.98
+San Diego-2024-02	Avg_Temp=14.84, Avg_Humidity=60.21, Avg_Precip=4.97, Avg_Wind=14.99
+San Diego-2024-03	Avg_Temp=14.96, Avg_Humidity=59.82, Avg_Precip=5.03, Avg_Wind=15.10
+San Diego-2024-04	Avg_Temp=14.89, Avg_Humidity=59.98, Avg_Precip=5.02, Avg_Wind=15.02
+San Diego-2024-05	Avg_Temp=15.01, Avg_Humidity=60.21, Avg_Precip=5.00, Avg_Wind=15.13
+San Jose-2024-01	Avg_Temp=14.92, Avg_Humidity=59.97, Avg_Precip=5.01, Avg_Wind=14.99
+San Jose-2024-02	Avg_Temp=14.96, Avg_Humidity=60.18, Avg_Precip=4.96, Avg_Wind=15.00
+San Jose-2024-03	Avg_Temp=14.91, Avg_Humidity=59.82, Avg_Precip=5.00, Avg_Wind=15.02
+San Jose-2024-04	Avg_Temp=15.03, Avg_Humidity=60.03, Avg_Precip=4.96, Avg_Wind=14.89
+San Jose-2024-05	Avg_Temp=14.94, Avg_Humidity=59.91, Avg_Precip=5.00, Avg_Wind=14.96
