@@ -1,48 +1,63 @@
 # Navigate to Hadoop directory
 cd ~/hadoop-3.4.1
 
-# Path to HDFS metadata (NameNode directory) from hdfs-site.xml
+# HDFS NameNode directory
 NAMENODE_DIR="/home/$USER/hadoopdata/hdfs/namenode"
 
-# Check if Hadoop has been formatted already
+# Check if Hadoop is formatted
 if [ ! -d "$NAMENODE_DIR/current" ]; then
-    echo "🟢 First-time setup: Formatting NameNode..."
+    echo "First-time setup: Formatting NameNode..."
     bin/hdfs namenode -format
 else
-    echo "✅ Hadoop is already formatted. Skipping format step."
+    echo "Hadoop is already formatted. Skipping format step."
 fi
 
-# Start HDFS and YARN
-echo "🚀 Starting Hadoop services..."
+# Start Hadoop
+echo "Starting Hadoop services..."
 sbin/start-dfs.sh
 sbin/start-yarn.sh
-
-# Wait a few seconds to make sure Hadoop services are up
 sleep 5
 
-# Create HDFS input directory (if not exists)
-echo "📁 Creating /weather in HDFS (if not exists)..."
+# Create input dir
 bin/hdfs dfs -mkdir -p /weather
 
-# Upload dataset to HDFS
-echo "📤 Uploading dataset to HDFS..."
+# Upload dataset
+echo "Uploading dataset to HDFS..."
 bin/hdfs dfs -put -f ~/weather_project/data/weather_data.csv /weather/
 
-# Remove existing output if it exists
-echo "🧹 Cleaning previous output directory..."
-bin/hdfs dfs -rm -r -f /weather/output
+# Make sure output directory exists locally
+mkdir -p ~/weather_project/output
 
-# Run Hadoop Streaming job
-echo "🔄 Running MapReduce job..."
+##########################
+# Job 1: Min/Max Values
+##########################
+echo "Running Job 1: Min/Max per City..."
+
+bin/hdfs dfs -rm -r -f /weather/output_minmax
+
 bin/hadoop jar share/hadoop/tools/lib/hadoop-streaming-*.jar \
 -input /weather/weather_data.csv \
--output /weather/output \
--mapper ~/weather_project/scripts/mapper.py \
--reducer ~/weather_project/scripts/reducer.py
+-output /weather/output_minmax \
+-mapper ~/weather_project/scripts/mapper_min_max.py \
+-reducer ~/weather_project/scripts/reducer_min_max.py
 
-# Download and show results
-echo "📥 Retrieving results from HDFS..."
-bin/hdfs dfs -get -f /weather/output/part-* ~/weather_project/output/results.txt
+hdfs dfs -cat '/weather/output_minmax/part-*'
+bin/hdfs dfs -get -f /weather/output_minmax/part-* ~/weather_project/output/results_minmax.txt
 
-echo "📄 MapReduce Output:"
-cat ~/weather_project/output/results.txt
+###############################
+# Job 2: Monthly Avg Temp
+###############################
+echo "Running Job 2: Monthly Avg Temperature..."
+
+bin/hdfs dfs -rm -r -f /weather/output_monthly_avg
+
+bin/hadoop jar share/hadoop/tools/lib/hadoop-streaming-*.jar \
+-input /weather/weather_data.csv \
+-output /weather/output_monthly_avg \
+-mapper ~/weather_project/scripts/mapper_monthly_avg.py \
+-reducer ~/weather_project/scripts/reducer_monthly_avg.py
+
+hdfs dfs -cat '/weather/output_monthly_avg/part-*'
+bin/hdfs dfs -get -f /weather/output_monthly_avg/part-* ~/weather_project/output/results_monthly_avg.txt
+
+echo "All jobs completed!"
