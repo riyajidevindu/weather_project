@@ -201,8 +201,7 @@ Makes the Python Scripts are executable:
 chmod +x run_hadoop.sh
 ```
 ```bash
-cd ~/weather_project/scripts
-chmod +x mapper.py reducer.py
+chmod +x ~/weather_project/scripts/*.py
 ```
 
 ## 🔟 Upload Dataser & Run the Project 
