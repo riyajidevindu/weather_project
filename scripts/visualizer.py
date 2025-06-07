@@ -5,7 +5,7 @@ import os
 
 # Read the reducer output
 results = []
-with open('output/results.txt', 'r') as f:
+with open('output/results_minmax.txt', 'r') as f:
     for line in f:
         parts = line.strip().split('\t')
         city = parts[0]
@@ -25,7 +25,7 @@ with open('output/results.txt', 'r') as f:
 df = pd.DataFrame(results)
 
 # Create output directory if it doesn't exist
-os.makedirs('output', exist_ok=True)
+os.makedirs('visualizations/min_max', exist_ok=True)
 
 # Plot function
 def plot_weather_metric(df, max_col, min_col, title, ylabel, filename, color_max, color_min):
@@ -61,8 +61,8 @@ def plot_weather_metric(df, max_col, min_col, title, ylabel, filename, color_max
     plt.xticks(ticks=x, labels=df['City'], rotation=45)
     plt.legend()
     plt.tight_layout()
-    plt.savefig(f'output/{filename}')
-    print(f"✅ Saved: output/{filename}")
+    plt.savefig(f'visualizations/min_max/{filename}')
+    print(f"✅ Saved: visualizations/min_max/{filename}")
     plt.close()
 
 # Generate all plots
