@@ -1,23 +1,6 @@
 # Navigate to Hadoop directory
 cd ~/hadoop-3.4.1
 
-# HDFS NameNode directory
-NAMENODE_DIR="/home/$USER/hadoopdata/hdfs/namenode"
-
-# Check if Hadoop is formatted
-if [ ! -d "$NAMENODE_DIR/current" ]; then
-    echo "First-time setup: Formatting NameNode..."
-    bin/hdfs namenode -format
-else
-    echo "Hadoop is already formatted. Skipping format step."
-fi
-
-# Start Hadoop
-echo "Starting Hadoop services..."
-sbin/start-dfs.sh
-sbin/start-yarn.sh
-sleep 5
-
 # Create input dir
 bin/hdfs dfs -mkdir -p /weather
 
