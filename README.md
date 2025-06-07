@@ -131,6 +131,16 @@ Apply changes:
 source ~/.bashrc
 ``` 
 
+Next Open .hadoop-env.sh file.
+
+```bash
+code ~/hadoop-3.4.1/etc/hadoop/hadoop-env.sh
+``` 
+Next add the following code for the end of the file to setup the java home path and save it. (Change the jave version number according to your installation)
+```bash
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+``` 
+
 ## 7️⃣: Format HDFS and Start Hadoop
 
 Format HDFS:
@@ -183,6 +193,14 @@ source venv/bin/activate
 Install dependencies:
 ```bash
 pip install pandas matplotlib
+```
+Makes the Python Scripts are executable:
+```bash
+chmod +x run_hadoop.sh
+```
+```bash
+cd ~/weather_project/scripts
+chmod +x mapper.py reducer.py
 ```
 
 ## 🔟 Upload Dataser & Run the Project 
