@@ -143,6 +143,8 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 ## 7️⃣: Format HDFS and Start Hadoop
 
+If you want you can skip this step and go ahead. The reason is this step is automatically configured in the step 10.
+
 Format HDFS:
 
 ```bash
