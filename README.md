@@ -228,7 +228,12 @@ HDFS UI (NameNode): http://<WSL-IP>:9870 or http://localhost:9870
 YARN UI (ResourceManager): http://<WSL-IP>:8088 or http://localhost:8088
 ```
 
-## 1️⃣3️⃣: Stop Hadoop and WSL
+## 1️⃣3️⃣: Deativate Venv, Stop Hadoop & WSL
+
+```bash
+cd ~/weather_project
+deactivate
+```
 
 ```bash
 cd ~/hadoop-3.4.1
