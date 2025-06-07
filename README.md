@@ -143,14 +143,17 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 ## 7️⃣: Format HDFS and Start Hadoop
 
-If you want you can skip this step and go ahead. The reason is this step is automatically configured in the step 10.
-
 Format HDFS:
 
 ```bash
 cd ~/hadoop-3.4.1
 bin/hdfs namenode -format
 ```   
+If you previously had namenode and you formatted it and then going to create new namenode and start the hadoop, sometime the datanode may not be started. This is because of the syncing issue of datanode and namenode. So if you forward the namenode please make sure to remove the datanode also. Replace your username with this code:
+
+```bash
+rm -rf /home/yourusername/hadoopdata/hdfs/datanode/*
+```  
 
 Start Hadoop:
 
